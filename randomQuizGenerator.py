@@ -30,13 +30,13 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             #       3. place the randomly-generated quizzes in the 'quizzes' directory.
             #       4. plaec the corresponding answers in the 'answers' directory.
 
-os.makedirs('.\\answers')
-os.makedirs('.\\quizzes')
+os.makedirs('./quizzes', exist_ok = True)
+os.makedirs('./answers', exist_ok = True)
 
 # Generate 5 quiz files.
 for quizNum in range(5):
-    quizFile = open('.\\quizzes\\capitalsquiz%s.txt' % (quizNum + 1), 'w')
-    answerKeyFile = open('.\\answers\\capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
+    quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1), 'w')
+    answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quizFile.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quizNum + 1))
     quizFile.write('\n\n')
