@@ -30,8 +30,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             #       3. place the randomly-generated quizzes in the 'quizzes' directory.
             #       4. plaec the corresponding answers in the 'answers' directory.
 
-os.makedirs('./quizzes', exist_ok = True)
-os.makedirs('./answers', exist_ok = True)
+os.makedirs('./quizzes')
+os.makedirs('./answers')
 
 # Generate 5 quiz files.
 for quizNum in range(5):
